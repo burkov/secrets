@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  secrets:
+    restart: unless-stopped
+    build: .
+    image: secrets:latest
+    container_name: secrets
+    ports:
+      - 42999:42999
+    volumes:
+      - ./data:/secrets/data
