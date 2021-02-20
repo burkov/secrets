@@ -6,6 +6,6 @@ services:
     image: secrets:latest
     container_name: secrets
     ports:
-      - 42999:42999
+      - 127.0.0.1:42999:42999
     volumes:
       - ./data:/secrets/data
